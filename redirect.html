@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }window.onload = function () {
+        const targetUrl = getQueryParam('url');
+        if (targetUrl) {
+            window.location.href = targetUrl;
+        } else {
+            document.body.innerHTML = '<h1>URL tidak ditemukan</h1>';
+        }
+    };
+</script>
+
+</head>
+<body>
+    <p>Mohon tunggu, sedang mengalihkan...</p>
+</body>
+</html>
